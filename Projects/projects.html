@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO - R.M.G. GAYASHA SHEHANI</title>
+    <link rel="stylesheet" href="Pstylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500;10..48,600;10..48,700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h2>Gayasha Ranasinghe</h2>
+        </div>
+        <nav class="nav-bar">
+            <a href="../Home/index.html">Home</a>
+            <a href="../Projects/projects.html" class="active">Projects</a>
+            <a href="../Resume/resume.html">Resume</a>
+            <a href="../Contacts/contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="topic">
+            <h1>Web Development</h1>
+        </div>
+
+        <div class="container">
+          
+            <div class="main-video">
+                <div class="video">
+                    <video src="../videos/hotelwebsite.mp4" controls muted autoplay alt="Web Site" aria-label="Hotel Heaven Web Site"></video>
+                    <h3 class="title">Hotel Heaven Web Site</h3>
+                </div>
+            </div>
+
+            <div class="video-list">
+                <div class="vid active" role="button" aria-label="Select Hotel Heaven Web Site">
+                    <video src="../videos/hotelwebsite.mp4" muted alt="Hotel Management Web Site"></video>
+                    <h3 class="title">Hotel Heaven Web Site</h3>
+                </div>
+                <div class="vid" role="button" aria-label="Select Quiz Web Application">
+                    <video src="../videos/quizapp.mp4" muted alt="Quiz Web Application"></video>
+                    <h3 class="title">Quiz Web Application</h3>
+                </div>
+                <div class="vid" role="button" aria-label="Select Dintharu Pre School Web Site">
+                    <video src="#" muted alt="Dintharu Pre School Web Site"></video>
+                    <h3 class="title">Dintharu Pre School Web Site</h3>
+                </div>
+                <div class="vid" role="button" aria-label="Select Bigota Shoe Products Web Site">
+                    <video src="#" muted alt="Bigota Shoe Products Web Site"></video>
+                    <h3 class="title">Bigota Shoe Products Web Site</h3>
+                </div>
+            </div>
+        </div>
+
+<div class="topic">
+    <h1>Graphic Designing</h1>
+</div>
+<div class="container">
+    <div class="main-image">
+        <div class="image">
+            <img src="../videos/p3.jpg" alt="Photoshop edits" aria-label="Sample Image 1">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+    </div>
+
+    <div class="image-list">
+        <div class="img active" role="button" aria-label="Select Adobe Photoshop Editing 1">
+            <img src="../videos/p1.jpg" alt="Adobe Photoshop Editing 1">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 2">
+            <img src="../videos/p2.jpg" alt="Adobe Photoshop Editing 2">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 3">
+            <img src="../videos/p3.jpg" alt="Adobe Photoshop Editing 3">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 4">
+            <img src="../videos/p4.jpg" alt="Adobe Photoshop Editing 4">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 5">
+            <img src="../videos/p5.jpg" alt="Adobe Photoshop Editing 5">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 6">
+            <img src="../videos/p6.jpg" alt="Adobe Photoshop Editing 6">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 7">
+            <img src="../videos/p7.jpg" alt="Adobe Photoshop Editing 7">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 8">
+            <img src="../videos/p8.jpg" alt="Adobe Photoshop Editing 8">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+        <div class="img" role="button" aria-label="Select Adobe Photoshop Editing 9">
+            <img src="../videos/p9.jpg" alt="Adobe Photoshop Editing 9">
+            <h3 class="title">Adobe Photoshop Editing</h3>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+
+    <footer>
+        <button><a href="../Resume/resume.html">About Me</a></button>
+        <button><a href="../Contacts/contact.html">Contact Me</a></button>
+    </footer>
+
+    <script>
+        
+        let listVideos = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let mainTitle = document.querySelector('.main-video .title');
+    
+        let listImages = document.querySelectorAll('.image-list .img');
+        let mainImage = document.querySelector('.main-image img');
+        let mainImageTitle = document.querySelector('.main-image .title');
+    
+        listVideos.forEach(video => {
+            video.addEventListener('click', () => {
+                
+                let videoSrc = video.querySelector('video').getAttribute('src');
+                let videoTitle = video.querySelector('.title').textContent;
+    
+                mainVideo.src = videoSrc;
+                mainTitle.textContent = videoTitle;
+    
+                listVideos.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+            });
+        });
+    
+        
+        listImages.forEach(image => {
+            image.addEventListener('click', () => {
+                
+                let imageSrc = image.querySelector('img').getAttribute('src');
+                let imageTitle = image.querySelector('.title').textContent;
+    
+                mainImage.src = imageSrc;
+                mainImageTitle.textContent = imageTitle;
+    
+                
+                listImages.forEach(img => img.classList.remove('active'));
+                image.classList.add('active');
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
